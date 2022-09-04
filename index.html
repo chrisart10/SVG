@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background: #000;
+        }
+        .icon-class{
+            width: 400px;
+        }
+        .icon-rect{
+            fill:yellow
+        }
+
+    /* FIXME */
+      .size-image{
+        width: 900px;
+        height: 900px;
+      }
+      #face-recognition-icon .icon-rect{
+        fill: red;
+      }
+
+
+    </style>
+    <title>SVG (scalar vector graphic)</title>
+</head>
+<body>
+    <!-- example 1 -->
+    <img class="icon-class" src="./img/face-recognition-icon.svg" alt="face recognition icon">
+
+    <!-- example 2 -->
+    <!-- In this example can ajust properties inside of svg. in example 1 doesn't .
+    the problem here is netheir readable and nor cacheable.
+    -->
+    <svg  width="570" height="688" viewBox="0 0 570 688" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect class="icon-rect" width="570" height="688" fill="white"/>
+        <ellipse cx="191.5" cy="260.5" rx="36.5" ry="35.5" fill="black"/>
+        <ellipse cx="191.5" cy="260.5" rx="36.5" ry="35.5" fill="black"/>
+        <ellipse cx="347.5" cy="260.5" rx="36.5" ry="35.5" fill="black"/>
+        <ellipse cx="347.5" cy="260.5" rx="36.5" ry="35.5" fill="black"/>
+        <path d="M251.692 464.999L186.054 413.625C182.587 410.878 177.867 409.341 172.947 409.358C168.027 409.375 163.317 410.944 159.869 413.715C152.594 419.489 152.625 428.629 159.939 434.354L238.518 495.856C245.832 501.581 257.615 501.54 264.89 495.766L462.614 338.97C469.889 333.195 469.858 324.055 462.544 318.331C459.077 315.583 454.357 314.047 449.437 314.063C444.517 314.08 439.807 315.649 436.359 318.42L251.692 464.999Z" fill="#03BF65"/>
+    </svg>
+
+    <!-- example 3 -->
+    <!-- more readable, declare in the botton and can ajust properties but is not cacheable -->
+    <!-- FIXME it doesn't scale correctly  -->
+    <svg class="size-image"> <use href="#face-recognition-icon"></use></svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+        <symbol id="face-recognition-icon" viewBox="0 0 570 688">
+            <rect class="icon-rect" width="570" height="688" fill="white"/>
+            <ellipse cx="191.5" cy="260.5" rx="36.5" ry="35.5" fill="black"/>
+            <ellipse cx="191.5" cy="260.5" rx="36.5" ry="35.5" fill="black"/>
+            <ellipse cx="347.5" cy="260.5" rx="36.5" ry="35.5" fill="black"/>
+            <ellipse cx="347.5" cy="260.5" rx="36.5" ry="35.5" fill="black"/>
+            <path d="M251.692 464.999L186.054 413.625C182.587 410.878 177.867 409.341 172.947 409.358C168.027 409.375 163.317 410.944 159.869 413.715C152.594 419.489 152.625 428.629 159.939 434.354L238.518 495.856C245.832 501.581 257.615 501.54 264.89 495.766L462.614 338.97C469.889 333.195 469.858 324.055 462.544 318.331C459.077 315.583 454.357 314.047 449.437 314.063C444.517 314.08 439.807 315.649 436.359 318.42L251.692 464.999Z" fill="#03BF65"/>
+        </symbol>
+    </svg>
+
+   
+</body>
+</html>
